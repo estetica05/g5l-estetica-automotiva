@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="G5L Estética Automotiva em Araguaína - TO. Lavagem detalhada, higienização, limpeza de motor, couro, plásticos, cera e muito mais." />
+  <title>G5L Estética Automotiva | Araguaína - TO</title>
+
+  <!-- Google Fonts & Phosphor Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    :root {
+      --blue: #087cff;
+      --blue-glow: rgba(8, 124, 255, 0.35);
+      --blue-dark: #0057bd;
+      --black: #050608;
+      --dark: #0b0e13;
+      --dark-2: #11151c;
+      --dark-3: #181f2a;
+      --gray: #8e98a7;
+      --light-gray: #39414d;
+      --light: #f4f7fb;
+      --white: #ffffff;
+      --border: rgba(255,255,255,.09);
+      --border-active: rgba(8, 124, 255, 0.4);
+      --green: #25d366;
+      --green-dark: #1da851;
+      --gold: #ffb100;
+      --font: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(5,6,8,.88);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      color: #d8dde5;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-button {
+      background: var(--blue);
+      color: white;
+      padding: 11px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 15px var(--blue-glow);
+    }
+
+    .nav-button:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+      background:
+        linear-gradient(90deg, rgba(5,6,8,0.96) 20%, rgba(5,6,8,0.85) 60%, rgba(5,6,8,0.4) 100%),
+        radial-gradient(circle at 75% 40%, rgba(8,124,255,.25), transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(8,124,255,.15), transparent 40%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 70%, var(--black));
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #91c7ff;
+      border: 1px solid var(--border-active);
+      background: rgba(8,124,255,.08);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      box-shadow: 0 0 20px rgba(8,124,255,0.15);
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: var(--blue);
+      text-shadow: 0 0 35px var(--blue-glow);
+    }
+
+    .hero p {
+      color: #b9c0cb;
+      font-size: 19px;
+      max-width: 620px;
+      margin-bottom: 35px;
+      font-weight: 400;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 26px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      border: 1px solid transparent;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 6px 20px var(--blue-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(8,124,255,0.5);
+    }
+
+    .btn-outline {
+      border-color: #39414d;
+      color: white;
+      background: rgba(255,255,255,.03);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      background: rgba(8,124,255,0.08);
+      transform: translateY(-3px);
+    }
+
+    .btn-whatsapp {
+      background: var(--green);
+      color: #041b0d;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.25);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--green-dark);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+    }
+
+    .hero-info {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 45px;
+      color: #9ba5b3;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-info span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-info i {
+      color: var(--blue);
+      font-size: 16px;
+    }
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .section-description {
+      color: var(--gray);
+      max-width: 680px;
+      margin-bottom: 45px;
+      font-size: 16px;
+    }
+
+    .dark-section {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .feature {
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      padding: 28px 22px;
+      border-radius: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .feature:hover {
+      border-color: var(--border-active);
+      transform: translateY(-5px);
+      background: var(--dark-3);
+    }
+
+    .feature-icon {
+      font-size: 32px;
+      color: var(--blue);
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .feature h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .price-card {
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .price-card:hover {
+      border-color: rgba(255,255,255,0.2);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+
+    .price-card.featured {
+      border-color: var(--blue);
+      box-shadow: 0 0 35px rgba(8,124,255,.18);
+      background: linear-gradient(180deg, rgba(8,124,255,0.06), var(--dark-2));
+    }
+
+    .price-card.featured:hover {
+      box-shadow: 0 10px 40px rgba(8,124,255,.3);
+    }
+
+    .featured-label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--blue);
+      color: white;
+      padding: 6px 14px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      border-radius: 0 0 0 10px;
+    }
+
+    .price-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 36px;
+      font-weight: 900;
+      margin: 15px 0;
+      color: white;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .price small {
+      color: var(--gray);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .price-card p {
+      color: var(--gray);
+      font-size: 13px;
+      margin-bottom: 22px;
+      min-height: 40px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-bottom: 28px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+
+    .check-list li {
+      font-size: 13px;
+      color: #cbd1da;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .check-list li i {
+      color: var(--blue);
+      font-size: 16px;
+    }
+
+    .full {
+      width: 100%;
+    }
+
+    .addons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .addon {
+      background: #0c1016;
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .addon:hover {
+      border-color: var(--border-active);
+      transform: translateY(-4px);
+      background: var(--dark-2);
+    }
+
+    .addon-icon {
+      font-size: 28px;
+      color: var(--blue);
+    }
+
+    .addon h3 {
+      margin: 12px 0 6px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .addon p {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    .addon-price {
+      color: #8bc3ff;
+      font-weight: 800;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+
+    .step {
+      padding: 24px 18px;
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .step:hover {
+      border-color: var(--blue);
+      transform: translateY(-4px);
+    }
+
+    .step-number {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      background: rgba(8,124,255,0.1);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-active);
+    }
+
+    .step h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    .diagnostic {
+      background:
+        linear-gradient(135deg, rgba(8,124,255,.22), rgba(8,124,255,.03)),
+        #0b1017;
+      border: 1px solid rgba(8,124,255,.3);
+      border-radius: 20px;
+      padding: 50px 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    .diagnostic p {
+      color: #aeb7c4;
+      max-width: 650px;
+      font-size: 15px;
+    }
+
+    .special-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .special {
+      border: 1px solid var(--border);
+      background: var(--dark-2);
+      border-radius: 16px;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .special:hover {
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .special.warning {
+      border-color: rgba(255,177,0,.3);
+      background: linear-gradient(180deg, rgba(255,177,0,0.03), var(--dark-2));
+    }
+
+    .special h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .special p {
+      color: var(--gray);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .notice {
+      background: rgba(255,177,0,.08);
+      border-left: 3px solid #ffb100;
+      padding: 14px 16px;
+      color: #dbe0e8;
+      font-size: 12px;
+      border-radius: 0 8px 8px 0;
+      margin: 18px 0;
+    }
+
+    .checkbox {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #cbd1da;
+      font-size: 13px;
+      margin: 20px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .checkbox input {
+      margin-top: 3px;
+      accent-color: var(--blue);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .care-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .care {
+      text-align: center;
+      padding: 28px 16px;
+      background: var(--dark-2);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .care:hover {
+      border-color: var(--border-active);
+      transform: translateY(-4px);
+    }
+
+    .care i {
+      font-size: 32px;
+      color: var(--blue);
+    }
+
+    .care strong {
+      display: block;
+      margin: 14px 0 6px;
+      font-size: 16px;
+    }
+
+    .care p {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    .promo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .promo {
+      padding: 40px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #101821, #0a0d12);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .promo:hover {
+      border-color: var(--border-active);
+      transform: translateY(-4px);
+    }
+
+    .promo h3 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .promo p {
+      color: var(--gray);
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #151a22, #080a0e);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray);
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item i {
+      font-size: 36px;
+      color: var(--blue);
+      margin-bottom: 10px;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      border-color: var(--blue);
+      transform: scale(1.02);
+      background: linear-gradient(135deg, #1b222d, #0d1017);
+    }
+
+    .gallery-item:hover i {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .faq {
+      max-width: 880px;
+    }
+
+    details {
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+      border-radius: 12px;
+      padding: 20px 22px;
+      transition: all 0.3s ease;
+    }
+
+    details[open] {
+      border-color: var(--border-active);
+      background: var(--dark-3);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 20px;
+      color: var(--blue);
+      font-weight: 700;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      color: var(--gray);
+      font-size: 14px;
+      padding-top: 14px;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 12px;
+    }
+
+    .contact {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(8,124,255,.18), transparent 60%),
+        var(--dark);
+      border-top: 1px solid var(--border);
+      padding: 100px 0;
+    }
+
+    .contact p {
+      color: var(--gray);
+      margin: 0 auto 30px;
+      max-width: 600px;
+      font-size: 16px;
+    }
+
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+    }
+
+    .contact-card {
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      padding: 20px 30px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: #e1e6ed;
+    }
+
+    .contact-card i {
+      color: var(--blue);
+      font-size: 22px;
+    }
+
+    .whatsapp-big {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--green);
+      color: #041b0d;
+      padding: 18px 36px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 16px;
+      margin: 10px;
+      box-shadow: 0 8px 30px rgba(37,211,102,.3);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-big:hover {
+      background: var(--green-dark);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(37,211,102,.5);
+    }
+
+    .social-link {
+      color: #b9c2cf;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .social-link:hover {
+      color: var(--blue);
+    }
+
+    footer {
+      background: #030405;
+      border-top: 1px solid var(--border);
+      padding: 50px 0 100px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    .footer-brand strong {
+      color: white;
+      display: block;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span {
+      color: var(--blue);
+    }
+
+    .footer-brand p {
+      max-width: 320px;
+      margin-top: 6px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin: 6px 0;
+    }
+
+    .footer-col ul a:hover {
+      color: var(--blue);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #555f6c;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #06150b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      z-index: 999;
+      box-shadow: 0 8px 30px rgba(37,211,102,.4);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1) rotate(8deg);
+      background: var(--green-dark);
+      color: white;
+    }
+
+    @media (max-width: 1024px) {
+      .features,
+      .addons,
+      .care-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .pricing {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .special-grid,
+      .promo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .diagnostic {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px;
+      }
+
+      .diagnostic .btn {
+        margin-top: 15px;
+        width: 100%;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 650px) {
+      section {
+        padding: 65px 0;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .features,
+      .pricing,
+      .addons,
+      .steps,
+      .care-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .diagnostic {
+        padding: 28px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        width: 54px;
+        height: 54px;
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#inicio" class="logo">G<span>5</span>L</a>
+
+      <ul class="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#adicionais">Adicionais</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <a class="nav-button" href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">
+        <i class="ph ph-whatsapp-logo" style="font-size: 18px;"></i> WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="badge">
+        <i class="ph-fill ph-map-pin"></i> ESTÉTICA AUTOMOTIVA • ARAGUAÍNA - TO
+      </div>
+
+      <h1>
+        G5L<br>
+        <span>ESTÉTICA</span><br>
+        AUTOMOTIVA
+      </h1>
+
+      <p>
+        Seu veículo merece um cuidado de verdade.
+        Atendimento personalizado, garagem fechada e atenção
+        aos detalhes em cada serviço.
+      </p>
+
+      <div class="buttons">
+        <a href="#servicos" class="btn btn-primary">
+          <i class="ph ph-sparkle"></i> VER SERVIÇOS
+        </a>
+
+        <a href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Quero%20fazer%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <i class="ph ph-whatsapp-logo"></i> ORÇAR PELO WHATSAPP
+        </a>
+      </div>
+
+      <div class="hero-info">
+        <span><i class="ph ph-calendar-check"></i> Horário marcado</span>
+        <span><i class="ph ph-house-line"></i> Garagem fechada</span>
+        <span><i class="ph ph-shield-check"></i> Cuidado em cada detalhe</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="dark-section">
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-star"></i> Por que G5L?</div>
+
+    <h2 class="section-title">
+      Seu carro não é<br>
+      só mais um.
+    </h2>
+
+    <p class="section-description">
+      Cada veículo possui uma necessidade diferente.
+      Por isso, quando necessário, avaliamos o veículo
+      antes de confirmar o procedimento.
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon"><i class="ph ph-magnifying-glass"></i></div>
+        <h3>Avaliação</h3>
+        <p>Entendemos o que seu veículo realmente precisa.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon"><i class="ph ph-garage"></i></div>
+        <h3>Garagem fechada</h3>
+        <p>Seu veículo recebe atendimento em ambiente protegido.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon"><i class="ph ph-sparkle"></i></div>
+        <h3>Detalhamento</h3>
+        <p>Atenção aos pequenos detalhes que fazem diferença.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon"><i class="ph ph-clipboard-text"></i></div>
+        <h3>Conferência</h3>
+        <p>Realizamos uma conferência rigorosa antes da entrega.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon"><i class="ph ph-user-focus"></i></div>
+        <h3>Personalizado</h3>
+        <p>Atendimento direto e transparente pelo WhatsApp.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="servicos">
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-car"></i> Nossos serviços</div>
+
+    <h2 class="section-title">
+      Escolha o cuidado<br>
+      do seu veículo.
+    </h2>
+
+    <p class="section-description">
+      Pacotes pensados para diferentes necessidades.
+      Alguns serviços podem depender de avaliação.
+    </p>
+
+    <div class="pricing">
+
+      <div class="price-card">
+        <div>
+          <h3>Essencial</h3>
+
+          <div class="price">
+            R$ 150 <small>a partir</small>
+          </div>
+
+          <p>
+            Para manutenção básica de veículos
+            que não estejam em condições extremas de sujeira.
+          </p>
+
+          <ul class="check-list">
+            <li><i class="ph ph-check-circle"></i> Lavagem externa</li>
+            <li><i class="ph ph-check-circle"></i> Rodas e pneus</li>
+            <li><i class="ph ph-check-circle"></i> Pretinho de alta duração</li>
+            <li><i class="ph ph-check-circle"></i> Vidros limpos</li>
+            <li><i class="ph ph-check-circle"></i> Acabamento básico</li>
+          </ul>
+        </div>
+
+        <a class="btn btn-outline full"
+           href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Tenho%20interesse%20na%20Lavagem%20Essencial.%20Gostaria%20de%20confirmar%20o%20servi%C3%A7o%20para%20meu%20ve%C3%ADculo."
+           target="_blank" rel="noopener noreferrer">
+          QUERO ESSA
+        </a>
+      </div>
+
+
+      <div class="price-card">
+        <div>
+          <h3>Completa</h3>
+
+          <div class="price">
+            R$ 250 <small>a partir</small>
+          </div>
+
+          <p>
+            Para quem quer um cuidado mais completo
+            por dentro e por fora.
+          </p>
+
+          <ul class="check-list">
+            <li><i class="ph ph-check-circle"></i> Lavagem externa técnica</li>
+            <li><i class="ph ph-check-circle"></i> Rodas e pneus</li>
+            <li><i class="ph ph-check-circle"></i> Limpeza interna detalhada</li>
+            <li><i class="ph ph-check-circle"></i> Vidros cristalinos</li>
+            <li><i class="ph ph-check-circle"></i> Hidratação de borrachas</li>
+            <li><i class="ph ph-check-circle"></i> Detalhamento das portas</li>
+          </ul>
+        </div>
+
+        <a class="btn btn-outline full"
+           href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Tenho%20interesse%20na%20Lavagem%20Completa.%20Gostaria%20de%20confirmar%20o%20servi%C3%A7o%20para%20meu%20ve%C3%ADculo."
+           target="_blank" rel="noopener noreferrer">
+          QUERO ESSA
+        </a>
+      </div>
+
+
+      <div class="price-card featured">
+        <div class="featured-label">MAIS PROCURADA</div>
+
+        <div>
+          <h3>Detalhada</h3>
+
+          <div class="price">
+            R$ 400 <small>a partir</small>
+          </div>
+
+          <p>
+            Mais atenção aos detalhes internos e externos
+            do veículo.
+          </p>
+
+          <ul class="check-list">
+            <li><i class="ph ph-check-circle"></i> Lavagem detalhada com pincéis</li>
+            <li><i class="ph ph-check-circle"></i> Rodas e caixas de rodas</li>
+            <li><i class="ph ph-check-circle"></i> Interior minuciosamente limpo</li>
+            <li><i class="ph ph-check-circle"></i> Portas, cantos e borrachas</li>
+            <li><i class="ph ph-check-circle"></i> Pincelamento de emblemas</li>
+            <li><i class="ph ph-check-circle"></i> Proteção de pintura com cera</li>
+          </ul>
+        </div>
+
+        <a class="btn btn-primary full"
+           href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Tenho%20interesse%20na%20Lavagem%20Detalhada.%20Gostaria%20de%20confirmar%20o%20servi%C3%A7o%20para%20meu%20ve%C3%ADculo."
+           target="_blank" rel="noopener noreferrer">
+          QUERO ESSA
+        </a>
+      </div>
+
+
+      <div class="price-card">
+        <div>
+          <h3>G5L Premium</h3>
+
+          <div class="price">
+            R$ 600 <small>a partir</small>
+          </div>
+
+          <p>
+            Para quem deseja um cuidado completo
+            e personalizado de alto nível.
+          </p>
+
+          <ul class="check-list">
+            <li><i class="ph ph-check-circle"></i> Detalhamento completo VIP</li>
+            <li><i class="ph ph-check-circle"></i> Interior aprofundado com extratora</li>
+            <li><i class="ph ph-check-circle"></i> Exterior descontaminado</li>
+            <li><i class="ph ph-check-circle"></i> Rodas e caixas profundas</li>
+            <li><i class="ph ph-check-circle"></i> Revitalização de plásticos</li>
+            <li><i class="ph ph-check-circle"></i> Proteção selante duradoura</li>
+            <li><i class="ph ph-check-circle"></i> Avaliação e laudo de entrega</li>
+          </ul>
+        </div>
+
+        <a class="btn btn-outline full"
+           href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Tenho%20interesse%20no%20pacote%20G5L%20Premium.%20Gostaria%20de%20fazer%20uma%20avalia%C3%A7%C3%A3o."
+           target="_blank" rel="noopener noreferrer">
+          ORÇAR
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="dark-section">
+  <div class="container">
+
+    <div class="diagnostic">
+      <div>
+        <div class="section-label"><i class="ph ph-question"></i> Não sabe escolher?</div>
+
+        <h2 class="section-title">
+          Nós ajudamos você.
+        </h2>
+
+        <p>
+          Conte como está seu veículo e o que você gostaria
+          de melhorar. Nossa equipe pode orientar qual serviço
+          faz mais sentido para o seu caso.
+        </p>
+      </div>
+
+      <a href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20N%C3%A3o%20sei%20qual%20servi%C3%A7o%20%C3%A9%20mais%20adequado%20para%20meu%20ve%C3%ADculo.%20Podem%20me%20ajudar%3F"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary" style="white-space: nowrap;">
+        <i class="ph ph-chats-teardrop"></i> FALAR COM A G5L
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="adicionais">
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-plus-circle"></i> Serviços adicionais</div>
+
+    <h2 class="section-title">
+      Personalize sua lavagem.
+    </h2>
+
+    <p class="section-description">
+      Precisa de algo específico? Adicione serviços ao seu pacote
+      ou fale com nossa equipe para uma avaliação personalizada.
+    </p>
+
+    <div class="addons">
+
+      <div class="addon">
+        <div class="addon-icon"><i class="ph ph-armchair"></i></div>
+        <h3>Higienização de bancos</h3>
+        <p>Limpeza profunda e remoção de sujeiras dos tecidos.</p>
+        <div class="addon-price">A partir de R$ 150</div>
+      </div>
+
+      <div class="addon">
+        <div class="addon-icon"><i class="ph ph-cloud-snow"></i></div>
+        <h3>Limpeza de teto</h3>
+        <p>Limpeza cuidadosa e remoção de manchas do revestimento.</p>
+        <div class="addon-price">A partir de R$ 50</div>
+      </div>
+
+      <div class="addon">
+        <div class="addon-icon"><i class="ph ph-engine"></i></div>
+        <h3>Limpeza de motor</h3>
+        <p>Serviço técnico mediante prévia avaliação.</p>
+        <div class="addon-price">A partir de R$ 150</div>
+      </div>
+
+      <div class="addon">
+        <div class="addon-icon"><i class="ph ph-wind"></i></div>
+        <h3>Ar-condicionado</h3>
+        <p>Higienização e troca do filtro para ar mais puro.</p>
+        <div class="addon-price">A partir de R$ 100</div>
+      </div>
+
+      <div class="addon">
+        <div class="addon-icon"><i class="ph ph-drop"></i></div>
+        <h3>Revitalização de plásticos</h3>
+        <p>Recuperação do tom e brilho de plásticos ressecados.</p>
+        <div class="addon-price">A partir de R$ 80</div>
+      </div>
+
+      <div class="addon">
+        <div class="addon-icon"><i class="ph ph-shield-check"></i></div>
+        <h3>Tratamento de Couro</h3>
+        <p>Limpeza técnica e hidratação profunda do couro.</p>
+        <div class="addon-price">A partir de R$ 150</div>
+      </div>
+
+      <div class="addon">
+        <div class="addon-icon"><i class="ph ph-paint-brush-household"></i></div>
+        <h3>Remoção de piche</h3>
+        <p>Descontaminação segura de piche e resíduos da pista.</p>
+        <div class="addon-price">A partir de R$ 80</div>
+      </div>
+
+      <div class="addon">
+        <div class="addon-icon"><i class="ph ph-sparkle"></i></div>
+        <h3>Aplicação de cera</h3>
+        <p>Proteção contra raios UV e brilho espelhado extra.</p>
+        <div class="addon-price">A partir de R$ 80</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="dark-section" id="como-funciona">
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-arrows-merge"></i> Simples e rápido</div>
+
+    <h2 class="section-title">
+      Como funciona?
+    </h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Escolha</h3>
+        <p>Escolha a lavagem ou serviço que necessita.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Informe</h3>
+        <p>Informe marca, modelo e ano do veículo.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Avaliação</h3>
+        <p>Quando necessário, envie fotos pelo WhatsApp.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">04</div>
+        <h3>Confirmação</h3>
+        <p>Confirmamos os procedimentos e o orçamento.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">05</div>
+        <h3>Horário</h3>
+        <p>Combinamos o melhor dia e horário na garagem.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">06</div>
+        <h3>Entrega</h3>
+        <p>Conferimos todos os detalhes antes da entrega.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-warning-circle"></i> Serviços especiais</div>
+
+    <h2 class="section-title">
+      Alguns cuidados<br>
+      precisam de avaliação.
+    </h2>
+
+    <div class="special-grid">
+
+      <div class="special warning">
+        <div>
+          <h3><i class="ph ph-engine" style="color:#ffb100;"></i> Lavagem de motor</h3>
+
+          <p>
+            Serviço realizado com responsabilidade e cuidados específicos.
+            As características e condições do veículo podem influenciar
+            a realização do procedimento.
+          </p>
+
+          <div class="notice">
+            A equipe poderá solicitar fotos e informações do veículo
+            antes de confirmar o serviço.
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="check-motor">
+            <span>
+              Li e estou ciente das condições e dos cuidados relacionados
+              à lavagem do motor.
+            </span>
+          </label>
+        </div>
+
+        <a class="btn btn-outline"
+           href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Tenho%20interesse%20na%20lavagem%20de%20motor.%20Gostaria%20de%20saber%20como%20funciona%20a%20avalia%C3%A7%C3%A3o."
+           target="_blank" rel="noopener noreferrer">
+          AVALIAR MOTOR
+        </a>
+      </div>
+
+
+      <div class="special">
+        <div>
+          <h3><i class="ph ph-motorbike" style="color:var(--blue);"></i> Serviços para motos</h3>
+
+          <p>
+            Informe o modelo da sua moto e conte exatamente o que
+            você deseja fazer. Nossa equipe avaliará o procedimento
+            antes da confirmação.
+          </p>
+
+          <div class="notice">
+            Para motocicletas existem condições específicas de atendimento.
+            Poderemos solicitar fotos pelo WhatsApp.
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="check-moto">
+            <span>
+              Li e estou ciente das condições específicas para serviços
+              em motocicletas.
+            </span>
+          </label>
+        </div>
+
+        <a class="btn btn-outline"
+           href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Tenho%20uma%20moto%20e%20gostaria%20de%20informar%20o%20que%20quero%20fazer%20para%20voc%C3%AAs%20avaliarem."
+           target="_blank" rel="noopener noreferrer">
+          AVALIAR MINHA MOTO
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="dark-section">
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-shield-check"></i> Nosso padrão</div>
+
+    <h2 class="section-title">
+      O cuidado G5L.
+    </h2>
+
+    <p class="section-description">
+      Antes de entregar, conferimos. Porque detalhe também faz parte do serviço.
+    </p>
+
+    <div class="care-grid">
+
+      <div class="care">
+        <div><i class="ph ph-magnifying-glass"></i></div>
+        <strong>Avaliamos</strong>
+        <p>Entendemos a necessidade do veículo.</p>
+      </div>
+
+      <div class="care">
+        <div><i class="ph ph-drop"></i></div>
+        <strong>Cuidamos</strong>
+        <p>Aplicamos o procedimento adequado.</p>
+      </div>
+
+      <div class="care">
+        <div><i class="ph ph-sparkle"></i></div>
+        <strong>Detalhamos</strong>
+        <p>Atenção total aos pequenos detalhes.</p>
+      </div>
+
+      <div class="care">
+        <div><i class="ph ph-check-square"></i></div>
+        <strong>Conferimos</strong>
+        <p>Rigorosa verificação antes da entrega.</p>
+      </div>
+
+      <div class="care">
+        <div><i class="ph ph-handshake"></i></div>
+        <strong>Acompanhamos</strong>
+        <p>Atendimento direto e focado no cliente.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="promo-grid">
+
+      <div class="promo">
+        <div class="section-label"><i class="ph ph-gift"></i> Primeiros clientes</div>
+
+        <h3>🎁 Sua primeira lavagem tem um brinde.</h3>
+
+        <p>
+          Os primeiros clientes que realizarem sua primeira
+          lavagem na G5L recebem um brinde especial de boas-vindas.
+        </p>
+
+        <a href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Quero%20saber%20sobre%20o%20brinde%20para%20primeira%20lavagem."
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline">
+          SABER MAIS
+        </a>
+      </div>
+
+
+      <div class="promo">
+        <div class="section-label"><i class="ph ph-users"></i> Indicação</div>
+
+        <h3>🤝 Indicou, ganhou.</h3>
+
+        <p>
+          Indique a G5L para amigos ou familiares e ganhe 5% de desconto
+          no seu próximo serviço, conforme regulamento.
+        </p>
+
+        <a href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Quero%20saber%20como%20funciona%20o%20desconto%20por%20indica%C3%A7%C3%A3o."
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline">
+          SABER MAIS
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="dark-section" id="galeria">
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-image"></i> Resultados</div>
+
+    <h2 class="section-title">
+      Veja a diferença<br>
+      que o cuidado faz.
+    </h2>
+
+    <p class="section-description">
+      Galeria de resultados e transformação dos veículos cuidados pela G5L.
+    </p>
+
+    <div class="gallery">
+
+      <div class="gallery-item">
+        <i class="ph ph-arrows-left-right"></i>
+        <span>ANTES / DEPOIS<br><small style="color:var(--gray);">Transformação de Pintura</small></span>
+      </div>
+
+      <div class="gallery-item">
+        <i class="ph ph-car-profile"></i>
+        <span>INTERIOR<br><small style="color:var(--gray);">Higienização Profunda</small></span>
+      </div>
+
+      <div class="gallery-item">
+        <i class="ph ph-armchair"></i>
+        <span>BANCOS<br><small style="color:var(--gray);">Restauração do Tecido</small></span>
+      </div>
+
+      <div class="gallery-item">
+        <i class="ph ph-sparkle"></i>
+        <span>EXTERIOR<br><small style="color:var(--gray);">Brilho Espelhado</small></span>
+      </div>
+
+      <div class="gallery-item">
+        <i class="ph ph-circle-notch"></i>
+        <span>RODAS<br><small style="color:var(--gray);">Caixas e Rodas Limpas</small></span>
+      </div>
+
+      <div class="gallery-item">
+        <i class="ph ph-engine"></i>
+        <span>MOTOR<br><small style="color:var(--gray);">Detalhamento Técnico</small></span>
+      </div>
+
+      <div class="gallery-item">
+        <i class="ph ph-drop"></i>
+        <span>PLÁSTICOS<br><small style="color:var(--gray);">Revitalização UV</small></span>
+      </div>
+
+      <div class="gallery-item">
+        <i class="ph ph-trophy"></i>
+        <span>RESULTADO FINAL<br><small style="color:var(--gray);">Padrão de Excelência G5L</small></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="faq">
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-question-mark"></i> Dúvidas</div>
+
+    <h2 class="section-title">
+      Perguntas frequentes.
+    </h2>
+
+    <div class="faq">
+
+      <details>
+        <summary>Preciso marcar horário?</summary>
+        <p>
+          Sim. Para garantir a atenção total e o padrão de qualidade G5L em cada veículo, todos os nossos atendimentos são realizados com horário agendado.
+        </p>
+      </details>
+
+      <details>
+        <summary>Preciso enviar fotos?</summary>
+        <p>
+          Nem sempre. Quando necessário (como sujeiras muito intensas, estofados manchados ou limpeza de motor), nossa equipe solicitará fotos pelo WhatsApp para oferecer um orçamento preciso.
+        </p>
+      </details>
+
+      <details>
+        <summary>Posso adicionar serviços à lavagem?</summary>
+        <p>
+          Com certeza! Você pode personalizar seu pacote adicionando higienização de bancos, limpeza de teto, aplicação de cera, entre outros serviços.
+        </p>
+      </details>
+
+      <details>
+        <summary>Vocês fazem lavagem de motor?</summary>
+        <p>
+          Sim. Realizamos a limpeza técnica do motor com produtos específicos. O serviço depende do modelo e das condições atuais do veículo, passando por prévia avaliação.
+        </p>
+      </details>
+
+      <details>
+        <summary>Vocês atendem motos?</summary>
+        <p>
+          Sim! Oferecemos lavagem detalhada para motocicletas. Por possuírem particularidades específicas, avaliamos o modelo antes da confirmação.
+        </p>
+      </details>
+
+      <details>
+        <summary>Meu carro está muito sujo. Posso levar?</summary>
+        <p>
+          Sim! Atendemos veículos em diversos estados. Solicitamos apenas que entre em contato pelo WhatsApp para enviarmos uma cotação adequada ao nível de sujeira do carro.
+        </p>
+      </details>
+
+      <details>
+        <summary>Os preços são fixos?</summary>
+        <p>
+          Os valores informados no site são preços de referência inicial. O valor final pode variar conforme o porte do veículo (hatch, sedan, SUV, picape) e o estado de conservação.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="contact" id="contato">
+
+  <div class="container">
+
+    <div class="section-label"><i class="ph ph-map-pin"></i> G5L ESTÉTICA AUTOMOTIVA</div>
+
+    <h2 class="section-title">
+      Vamos cuidar<br>
+      do seu veículo?
+    </h2>
+
+    <p>
+      Informe seu veículo e o serviço que deseja.
+      Nossa equipe vai ajudar você a encontrar o cuidado certo.
+    </p>
+
+    <div class="contact-cards">
+      <div class="contact-card">
+        <i class="ph ph-map-pin"></i>
+        <span>Araguaína - TO • Garagem Fechada</span>
+      </div>
+      <div class="contact-card">
+        <i class="ph ph-clock"></i>
+        <span>Atendimento com Horário Marcado</span>
+      </div>
+    </div>
+
+    <div>
+      <a class="whatsapp-big"
+         href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Quero%20fazer%20um%20or%C3%A7amento."
+         target="_blank" rel="noopener noreferrer">
+        <i class="ph ph-whatsapp-logo" style="font-size: 26px;"></i> AGENDAR PELO WHATSAPP
+      </a>
+    </div>
+
+    <a class="social-link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <i class="ph ph-instagram-logo" style="font-size: 20px; color: #e1306c;"></i> Siga a G5L no Instagram
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <strong>G<span>5</span>L ESTÉTICA AUTOMOTIVA</strong>
+        <p>Cuidado detalhado, atendimento individualizado e proteção para seu veículo em Araguaína - TO.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#adicionais">Adicionais</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#faq">Dúvidas Frequentes</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="https://wa.me/5563992429259" target="_blank" rel="noopener noreferrer">WhatsApp Direct</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 G5L Estética Automotiva. Todos os direitos reservados. Araguaína - Tocantins.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5563992429259?text=Ol%C3%A1%2C%20G5L!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es."
+   class="floating-whatsapp"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Falar no WhatsApp">
+  <i class="ph ph-whatsapp-logo"></i>
+</a>
+
+</body>
+</html>
